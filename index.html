@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Group Hangman</title>
-  </head>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <body>
+</head>
+<body>
     <h1>Hangman</h1>
     <p>Use the alphabet below to guess the word</p>
 
@@ -37,6 +36,34 @@
     <button>z</button>
 
 
+<p id="keyboardValue"></p>
 
-  </body>
+</body>
+
+<script>
+var wordList = ["monkey", "zebra","dog", "javascript"];
+var randomWordIndex = Math.floor(Math.random(wordList)*10);
+console.log (randomWordIndex);
+var secrectWord = wordList[randomWordIndex];
+console.log (secrectWord);
+
+var guess = document.getElementById ("keyboardValue");
+var userguess = guess.textContent;
+
+var answerArray = [];
+for (var i = 0; i < secrectWord.length; i++) {
+answerArray[i] = "_"; }
+document.addEventListener("keydown", function(event) {
+  console.log(event.key);
+  
+  guess.textContent = event.key ;
+})
+
+
+
+
+
+
+
+</script>
 </html>
