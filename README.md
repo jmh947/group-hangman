@@ -1,8 +1,4 @@
-
 Hello 
-let's start with pseudocode
-
+hi
 christina's edit
-
 Hello 
-
