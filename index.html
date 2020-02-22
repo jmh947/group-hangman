@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+
+<p id="keyboardValue"></p>
+
+</body>
+
+<script>
+var wordList = ["monkey", "zebra","dog", "javascript"];
+var randomWordIndex = Math.floor(Math.random(wordList)*10);
+console.log (randomWordIndex);
+var secrectWord = wordList[randomWordIndex];
+console.log (secrectWord);
+
+var guess = document.getElementById ("keyboardValue");
+var userguess = guess.textContent;
+
+var answerArray = [];
+for (var i = 0; i < secrectWord.length; i++) {
+answerArray[i] = "_"; }
+document.addEventListener("keydown", function(event) {
+  console.log(event.key);
+  
+  guess.textContent = event.key ;
+})
+
+
+
+
+
+
+
+</script>
+</html>
